@@ -12,10 +12,17 @@ var MessagesView = {
 
   render: function() {
     // TODO: Render _all_ the messages.
+    // implement app.fetch()
   },
 
   renderMessage: function(message) {
     // TODO: Render a single message.
+    // $('body').append($chats)
+    var $message = MessageView.render(message);
+    //grab message and render()
+    //append it to #chat
+    MessagesView.$chats.prepend($message);
+    // console.log('this is message:', $message);
   },
 
   handleClick: function(event) {
